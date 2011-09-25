@@ -9,13 +9,30 @@
             (copy-sequence (normal-top-level-add-to-load-path '(".")))
             (normal-top-level-add-subdirs-to-load-path)))
          load-path)))
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
-(setq auto-mode-alist 
-      (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (add-hook 'markdown-mode-hook 'turn-off-auto-fill)
+
+(require `lua-mode)
+(require `lua2-mode)
+
+(setq auto-mode-alist
+  (append 
+   '(
+     ;; Markup
+     ("\\.markdown" . markdown-mode)
+     ("\\.md" . markdown-mode)
+     ("\\.yaml" . yaml-mode)
+     ("\\.proto\\'" . protobuf-mode)
+     ;; Config
+     ("\\.com'" . nginx-mode)
+     ;; Programming
+     ("\\.hs'" . haskell-mode)
+     ("\\.lua'" . lua2-mode))
+   auto-mode-alist))
 
 ;; Originally from stevey, adapted to support moving to a new directory.
 (defun rename-file-and-buffer (new-name)
