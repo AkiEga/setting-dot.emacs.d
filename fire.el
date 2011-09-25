@@ -15,6 +15,7 @@
   "Major mode for editing Markdown files" t) 
 (setq auto-mode-alist 
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(add-hook 'markdown-mode-hook 'turn-off-auto-fill)
 
 ;; Originally from stevey, adapted to support moving to a new directory.
 (defun rename-file-and-buffer (new-name)
