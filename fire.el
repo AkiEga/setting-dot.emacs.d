@@ -1,5 +1,12 @@
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
+;;(scroll-bar-mode 1)
+
+(delete-selection-mode t)
+(setq redisplay-dont-pause t)
+
+(setq ispell-prefer-aspell 1)
+(setq ispell-dictionary "canadian")
 
 (let ((default-directory "~/.emacs.d/site-lisp/"))
   (setq load-path
@@ -18,6 +25,7 @@
 
 (require `lua-mode)
 (require `lua2-mode)
+(require `yaml-mode)
 
 (setq auto-mode-alist
   (append 
