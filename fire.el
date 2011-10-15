@@ -5,7 +5,8 @@
 (delete-selection-mode t)
 (setq redisplay-dont-pause t)
 
-(setq ispell-prefer-aspell 1)
+(setq ispell-program-name "/usr/local/bin/aspell")
+(setq ispell-skip-html t)
 (setq ispell-dictionary "canadian")
 
 (let ((default-directory "~/.emacs.d/site-lisp/"))
@@ -18,6 +19,7 @@
          load-path)))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;;(load-theme `zenburn)
 
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
@@ -75,3 +77,18 @@
   (interactive "r")
   (let ((fill-column (point-max)))
     (fill-region start end nil)))
+
+(autoload 'auto-capitalize-mode "auto-capitalize"
+  "Toggle `auto-capitalize' minor mode in this buffer." t)
+(autoload 'turn-on-auto-capitalize-mode "auto-capitalize"
+  "Turn on `auto-capitalize' minor mode in this buffer." t)
+(autoload 'enable-auto-capitalize-mode "auto-capitalize"
+  "Enable `auto-capitalize' minor mode in this buffer." t)
+(setq auto-capitalize-words '("BCIT" "BUSA" "I"))
+(add-hook 'markdown-mode-hook 'turn-on-auto-capitalize-mode)
+
+(speedbar)
+(setq speedbar-show-unknown-files t)
+
+(global-linum-mode 1)
+(setq linum-format "%4d ")
