@@ -19,7 +19,10 @@
          load-path)))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;;(load-theme `zenburn)
+(condition-case nil
+    (load-theme 'zenburn t)
+  (wrong-number-of-arguments
+   (load-theme 'zenburn)))
 
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
