@@ -41,11 +41,12 @@
      ("\\.yaml" . yaml-mode)
      ("\\.proto\\'" . protobuf-mode)
      ;; Config
-     ("\\.com'" . nginx-mode)
+     ("\\.com" . nginx-mode)
      ;; Programming
-     ("\\.hs'" . haskell-mode)
-     ("\\.lua'" . lua2-mode))
-   auto-mode-alist))
+     ("\\.hs" . haskell-mode)
+     ("\\.lua" . lua2-mode)
+     ("\\.java" . java-mode)
+     auto-mode-alist)))
 
 ;; Originally from stevey, adapted to support moving to a new directory.
 (defun rename-file-and-buffer (new-name)
