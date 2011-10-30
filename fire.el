@@ -26,7 +26,7 @@
 
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
-(add-hook 'markdown-mode-hook 'turn-off-auto-fill)
+;;(add-hook 'markdown-mode-hook 'turn-off-auto-fill)
 
 (require `lua-mode)
 (require `lua2-mode)
