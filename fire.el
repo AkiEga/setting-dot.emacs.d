@@ -31,6 +31,7 @@
 (require `lua-mode)
 (require `lua2-mode)
 (require `yaml-mode)
+;;(require `nxhtml-mode)
 
 (setq auto-mode-alist
   (append 
@@ -40,12 +41,18 @@
      ("\\.md" . markdown-mode)
      ("\\.yaml" . yaml-mode)
      ("\\.proto\\'" . protobuf-mode)
+    ;; ("\\.html" . nxhtml-mode)
+     ("\\.css" . css-mode)
      ;; Config
      ("\\.com" . nginx-mode)
      ;; Programming
+     ("\\.el" . lisp-mode)
      ("\\.hs" . haskell-mode)
      ("\\.lua" . lua2-mode)
      ("\\.java" . java-mode)
+     ("\\.cpp" . c++-mode)
+     ("\\.hpp" . c++-mode)
+     ("\\.h" . c++-mode)
      auto-mode-alist)))
 
 ;; Originally from stevey, adapted to support moving to a new directory.
