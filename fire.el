@@ -91,8 +91,8 @@
 (setq auto-capitalize-words '("BCIT" "BUSA" "I"))
 (add-hook 'markdown-mode-hook 'turn-on-auto-capitalize-mode)
 
-(speedbar)
-(setq speedbar-show-unknown-files t)
+;; (speedbar)
+;; (setq speedbar-show-unknown-files t)
 
 (global-linum-mode 1)
 (setq linum-format "%4d ")
