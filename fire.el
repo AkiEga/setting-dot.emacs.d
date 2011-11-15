@@ -93,15 +93,6 @@
   (let ((fill-column (point-max)))
     (fill-region start end nil)))
 
-(autoload 'auto-capitalize-mode "auto-capitalize"
-  "Toggle `auto-capitalize' minor mode in this buffer." t)
-(autoload 'turn-on-auto-capitalize-mode "auto-capitalize"
-  "Turn on `auto-capitalize' minor mode in this buffer." t)
-(autoload 'enable-auto-capitalize-mode "auto-capitalize"
-  "Enable `auto-capitalize' minor mode in this buffer." t)
-(setq auto-capitalize-words '("BCIT" "BUSA" "I"))
-(add-hook 'markdown-mode-hook 'turn-on-auto-capitalize-mode)
-
 ;; (speedbar)
 ;; (setq speedbar-show-unknown-files t)
 
