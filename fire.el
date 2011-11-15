@@ -1,3 +1,5 @@
+(push "/usr/local/bin" exec-path)
+
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
 ;;(scroll-bar-mode 1)
@@ -24,6 +26,8 @@
   (wrong-number-of-arguments
    (load-theme 'zenburn)))
 
+(require 'el-get)
+;;http://www.viget.com/extend/emacs-24-rails-development-environment-from-s
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
 ;;(add-hook 'markdown-mode-hook 'turn-off-auto-fill)
@@ -103,3 +107,9 @@
 
 (global-linum-mode 1)
 (setq linum-format "%4d ")
+
+;;(when (require 'auto-complete-config nil 'noerror) ;; don't break if not installed 
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;;(setq ac-comphist-file  "~/.emacs.d/ac-comphist.dat")
+;;(ac-config-default))
+
