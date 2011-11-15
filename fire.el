@@ -2,7 +2,6 @@
 
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
-;;(scroll-bar-mode 1)
 
 (delete-selection-mode t)
 (setq redisplay-dont-pause t)
@@ -27,15 +26,13 @@
    (load-theme 'zenburn)))
 
 (require 'el-get)
-;;http://www.viget.com/extend/emacs-24-rails-development-environment-from-s
+
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
-;;(add-hook 'markdown-mode-hook 'turn-off-auto-fill)
 
 (require `lua-mode)
 (require `lua2-mode)
 (require `yaml-mode)
-;;(require `nxhtml-mode)
 
 (setq auto-mode-alist
   (append 
@@ -93,15 +90,7 @@
   (let ((fill-column (point-max)))
     (fill-region start end nil)))
 
-;; (speedbar)
-;; (setq speedbar-show-unknown-files t)
-
 (global-linum-mode 1)
 (setq linum-format "%4d ")
-
-;;(when (require 'auto-complete-config nil 'noerror) ;; don't break if not installed 
-;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;;(setq ac-comphist-file  "~/.emacs.d/ac-comphist.dat")
-;;(ac-config-default))
 
 (set-default-font "-*-ubuntu mono-*-*-normal-*-18-*-*-*-*-*-*-*")
