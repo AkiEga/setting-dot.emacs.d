@@ -113,3 +113,4 @@
 ;;(setq ac-comphist-file  "~/.emacs.d/ac-comphist.dat")
 ;;(ac-config-default))
 
+(set-default-font "-*-ubuntu mono-*-*-normal-*-18-*-*-*-*-*-*-*")
