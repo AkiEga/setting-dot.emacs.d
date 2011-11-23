@@ -42,7 +42,7 @@
      ("\\.md" . markdown-mode)
      ("\\.yaml" . yaml-mode)
      ("\\.proto\\'" . protobuf-mode)
-    ;; ("\\.html" . nxhtml-mode)
+     ;; ("\\.html" . nxhtml-mode)
      ("\\.css" . css-mode)
      ;; Config
      ("\\.com" . nginx-mode)
@@ -94,3 +94,14 @@
 (setq linum-format "%4d ")
 
 (set-default-font "-*-ubuntu mono-*-*-normal-*-18-*-*-*-*-*-*-*")
+
+(require 'ess-site)
+(require 'textmate)
+(textmate-mode)
+
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(require 'auto-complete-config)
+(ac-config-default)
+
+(require 'ctags)

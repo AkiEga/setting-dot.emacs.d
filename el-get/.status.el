@@ -1,1 +1,1 @@
-(:auto-complete "installed" :auto-complete-clang "installed" :auto-complete-css "installed" :auto-complete-etags "installed")
+(:auto-complete "installed" :auto-complete-clang "installed" :auto-complete-css "installed" :auto-complete-etags "installed" :ess "required" :escreen "installed")
