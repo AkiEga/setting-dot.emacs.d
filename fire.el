@@ -93,7 +93,7 @@
 (global-linum-mode 1)
 (setq linum-format "%4d ")
 
-(set-default-font "-*-ubuntu mono-*-*-normal-*-18-*-*-*-*-*-*-*")
+(set-default-font "-*-ubuntu mono-*-*-normal-*-14-*-*-*-*-*-*-*")
 
 (require 'ess-site)
 (require 'textmate)
@@ -103,5 +103,3 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 (require 'auto-complete-config)
 (ac-config-default)
-
-(require 'ctags)
